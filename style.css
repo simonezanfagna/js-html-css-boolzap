@@ -176,6 +176,11 @@ input{
   border-bottom: 1px solid rgba(0,0,0,.08);
 }
 
+.container-messaggi .conversazione-left:first-child{
+  border-top: 1px solid rgba(0,0,0,.08);
+  background-color: #ebebeb;
+}
+
 .conversazione-left .img-utente{
   margin-right: 20px;
 }
