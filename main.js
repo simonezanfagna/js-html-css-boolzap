@@ -10,6 +10,16 @@ function invioMessage() {
   }
 }
 
+function rispostaComputer() {
+  setTimeout(function () {
+    var risposta_computer = 'OK'
+    var template_testo = $('.template .message').clone();
+    template_testo.children('.message-text').text(risposta_computer);
+    template_testo.addClass('received');
+    $('.area-conversazione').append(template_testo);
+  },1000)
+}
+
 $('.digita-testo input').keypress(function (event) {
 
   if (event.which > 0) {
@@ -24,6 +34,7 @@ $('.digita-testo .fas').click(function () {
   invioMessage();
   $('#paper-plane').removeClass('active');
   $('#microphone').addClass('active');
+  rispostaComputer();
 })
 
 $('.digita-testo input').keypress(function (event) {
@@ -31,5 +42,6 @@ $('.digita-testo input').keypress(function (event) {
     invioMessage();
     $('#paper-plane').removeClass('active');
     $('#microphone').addClass('active');
+    rispostaComputer();
   }
 })
