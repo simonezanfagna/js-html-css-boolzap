@@ -22,6 +22,10 @@ a{
   text-decoration: none;
 }
 
+.active{
+  display: block;
+}
+
 .clearfix::after{
   clear: both;
   display: table;
@@ -241,6 +245,7 @@ main{
 .area-conversazione{
   height: calc(100% - 60px);
   overflow-y: auto;
+  padding: 40px 80px;
 }
 
 .digita-testo{
@@ -253,11 +258,16 @@ main{
   align-items: center;
 }
 
-.digita-testo a{
+.digita-testo i{
+  cursor: pointer;
   margin-left: 25px;
   margin-right: 25px;
   color: #767d81;
   font-size: 22px;
+}
+
+.fa-paper-plane{
+  display: none
 }
 
 .digita-testo input{
@@ -272,4 +282,40 @@ main{
 
 .template{
   display: none;
+}
+
+.area-conversazione .message {
+	position: relative;
+	margin: 5px 0;
+	padding: 15px 15px 20px 15px;
+	min-width: 20%;
+	max-width: 60%;
+	background: #fff;
+	border-radius: 10px;
+	font-size: 15px;
+}
+
+.area-conversazione .message::after {
+	content: '';
+	display: table;
+	overflow: hidden;
+	clear: both;
+}
+
+.message-time {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	font-size: 10px;
+	color: #B6B9BB;
+}
+.area-conversazione .message.received {
+	background: white;
+	float:left;
+	clear:both;
+}
+.area-conversazione .message.sent {
+	background: #dcf8c6;
+	float: right;
+	clear:both;
 }
