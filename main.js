@@ -11,7 +11,7 @@ function invioMessage() {
 }
 
 function rispostaComputer() {
-  if (($('.area-conversazione').children().length) > 0 && !$('.area-conversazione').children().eq([-1]).hasClass('received')) {
+  if (($('.area-conversazione').children().length) > 0 && !$('.area-conversazione').children().eq(-1).hasClass('received')) {
     setTimeout(function () {
       var risposta_computer = 'OK';
       var template_testo = $('.template .message').clone();
