@@ -165,6 +165,7 @@ input{
 
 .container-messaggi{
   overflow-y: auto;
+  height: calc(100% - 200px);
 }
 
 .conversazione-left{
@@ -174,6 +175,12 @@ input{
   align-items: center;
   padding: 13px 12px 14px 13px;
   border-bottom: 1px solid rgba(0,0,0,.08);
+  cursor: pointer;
+  background-color: white;
+}
+
+.conversazione-left:hover{
+  background-color: #f5f5f5;
 }
 
 .container-messaggi .conversazione-left:first-child{
@@ -185,12 +192,22 @@ input{
   margin-right: 20px;
 }
 
+.conversazione-left .info-conversazione{
+  width: 80%;
+}
+
 .container-right .info-conversazione{
   float: left;
 }
 
-.info-conversazione p:first-child{
+.info-conversazione p:first-child .nome{
   font-weight: 600;
+}
+
+.info-conversazione p:first-child .orario{
+  float: right;
+  font-size: 13px;
+  color: #afafaf;
 }
 
 .info-conversazione p:nth-child(2){
@@ -251,4 +268,8 @@ main{
 
 .digita-testo input::placeholder{
   color: #afafaf;
+}
+
+.template{
+  display: none;
 }
