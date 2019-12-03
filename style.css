@@ -158,6 +158,10 @@ a{
   margin-right: 20px;
 }
 
+.fa-search{
+  cursor: pointer;
+}
+
 input{
   width: 100%;
   border: none;
