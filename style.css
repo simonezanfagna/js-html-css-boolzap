@@ -158,13 +158,17 @@ a{
   margin-right: 20px;
 }
 
-.fa-search{
+/* .fa-search{
   cursor: pointer;
-}
+} */
 
 input{
   width: 100%;
   border: none;
+}
+
+.ricerca-left-color input{
+  height: 30px;
 }
 
 .ricerca-left-color input::placeholder{

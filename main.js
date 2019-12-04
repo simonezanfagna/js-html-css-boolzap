@@ -59,4 +59,26 @@ $('.digita-testo input').keypress(function (event) {
     $('#microphone').addClass('active');
   }
 })
-console.log($('.area-conversazione').children().length);
+
+$('.ricerca-left-color input').keyup(function () {
+  var testo_ricerca = $(this).val();
+  if (testo_ricerca.length != 0) {
+    $('.conversazione-left').each(function () {
+      var nome_conversazione = $(this).find('.nome').text();
+      testo_ricerca = testo_ricerca.toLowerCase();
+      nome_conversazione = nome_conversazione.toLowerCase();
+
+      if (nome_conversazione.includes(testo_ricerca)) {
+
+        $(this).show();
+      }
+      else {
+
+        $(this).hide();
+      }
+    })
+  }
+  else {
+    $('.conversazione-left').show();
+  }
+})
