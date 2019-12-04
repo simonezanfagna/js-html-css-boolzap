@@ -82,3 +82,25 @@ $('.ricerca-left-color input').keyup(function () {
     $('.conversazione-left').show();
   }
 })
+// da migliorare e finire il milestone 3 -Click sul contatto- ----------
+$('.conversazione-left').click(function () {
+
+  $('.conversazione-left').removeClass('messaggio-active');
+  $(this).addClass('messaggio-active');
+  $('.digita-testo-container').show();
+  var utente_conversazione = $(this).find('.img-utente, .info-conversazione p:first-child span.nome').clone();
+  $('.conversazione-attuale').append(utente_conversazione);
+
+})
+//  --------------------------------------------------------
+
+
+$(document).on('click', '.fa-chevron-down',function () {
+
+  $(this).siblings('.message-options').toggle();
+})
+
+$(document).on('click', '.message-delete',function () {
+  var messaggio_eliminato = $(this).parents('.message').children('.message-text').html('<p><em>Hai eliminato questo messaggio</em></p>')
+  $('.message .message-text p').css('margin-right','20px');
+})
